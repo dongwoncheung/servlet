@@ -22,3 +22,15 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+commit:내컴퓨터 적용
+stage-commit전 후보 등록
+push: local에 있는 내용을 원격 서버(github)로 전송
+branch: 코드 버전의 덩어리
+merge:코드 brench내용 병합(ex: develop에 있는 내용을 master로 병합)
+pull: 주석 처럼 조그만한 코드만 내려 받을때
+
+무조껀 pull(집에서 올린 내용을 받을수있다)부터 받기 -> code -> commit -> pull -> (충돌) ->push 
+
+
+
