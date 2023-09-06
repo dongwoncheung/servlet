@@ -62,7 +62,7 @@ int age = 2023 - Integer.valueOf(year);
 
 %>
 <h2> 20010820의 나이는<%= age %>세입니다.</h2>
-	
+	 
 
 
 

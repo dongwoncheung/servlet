@@ -38,7 +38,7 @@
 		return "hello world";
 	}
 %>
-<%=getHelloWorld()%>
+<%= getHelloWorld() %>
 <br>
 <%= num + 200%>
 
