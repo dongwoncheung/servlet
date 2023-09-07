@@ -23,8 +23,8 @@
 		
 		<h3>
 		<%
-		if(types != null){
-			for(String type : types){// inch
+		if(type != null){
+			for(String types : type){// inch
 				if(type.equals("inch")){
 					double inch = length * 0.393701;
 					out.print(inch + "in<br>");
