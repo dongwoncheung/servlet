@@ -29,7 +29,7 @@
 		%>
 		<tr>
 			<th>
-			<%
+			<%--<%= key%>--%>
 				if(key.equals("korean")){
 					out.print("국어");
 				}else if(key.equals("english")){
@@ -42,7 +42,7 @@
 			
 			
 			
-			%>
+			
 			</th>
 			<td><%= scoreMap.get(key) %></td>
 		</tr>
