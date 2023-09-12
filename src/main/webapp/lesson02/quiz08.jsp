@@ -17,10 +17,11 @@
 	<table class="table">
 		
 			<thead>
-            <tr>
-                <th>id</th>
-                <th>표지</th>
-                <th>제목</th>
+			<%--row 클래스 를 설정하면 12칸 기준으로 칸영역을 잡을수있다. --%>
+            <tr class="row">
+                <th class="col-1">id</th>
+                <th class="col-2">표지</th>
+                <th class="col-9">제목</th>
             </tr>
         </thead>
         <tbody>

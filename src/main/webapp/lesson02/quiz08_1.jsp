@@ -58,31 +58,45 @@ map = new HashMap<String, Object>() {
 list.add(map);
 %>
 <%
- 	int n1 = Integer.valueOf(request.getParameter("1000"));
- 	int n2 = Integer.valueOf(request.getParameter("1001"));
- 	int n3 = Integer.valueOf(request.getParameter("1002"));
- 	int n4 = Integer.valueOf(request.getParameter("1003"));
-	
+    String n1 = request.getParameter("id");
+    if (n1 != null) {
+        int bookId = Integer.parseInt(n1);
+        Map<String, Object> selectedItem = null;
+        
+        
+//--table에 보여줄 책 정보(target) 뽑아내기 
+//Map<String, Object> target = new HashMap<>();
+
+        for (Map<String, Object> item : list) {
+            int itemId = (int) item.get("id");
+            if (itemId == bookId) {
+                selectedItem = item;
+                break; 
+            }
+        }
+        
+        
+        if (selectedItem != null) {
 %>
-<% 
-	for(Map<String, Object> item : list){
-		if(){
-			}
-		}
-	
+<div class="container d-flex">
+    <div>
+        <img src="<%= selectedItem.get("image") %>" alt="표지" width="300">
+    </div>
 
-
-
-
-%>
-<div class="container">
-	<h1><%= %></h1>
-	<h3><%= %></h3>
-	<h2><%= %></h2>
+    <div>
+        <h1><%= selectedItem.get("title") %></h1><!-- class="d-block" -->
+        <h3><%= selectedItem.get("author") %></h3><!-- text-info -->
+        <h2><%= selectedItem.get("publisher") %></h2><!-- text-secondary -->
+    </div>
 </div>
 <%
-
+        } else {
+            // Handle case when book is not found
+            out.print("Book not found");
+        }
+    }
 %>
+
 
 </body>
 </html>
