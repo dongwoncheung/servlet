@@ -1,3 +1,3 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<small>Copyright © marondal 2022.</small>
+<h2 class="text-danger font-weight-bold">SK Broadband IPTV</h2>
